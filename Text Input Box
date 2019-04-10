@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: ourApp(),));
+
+class ourApp extends StatefulWidget {
+  @override
+  _ourAppState createState() => _ourAppState();
+}
+
+class _ourAppState extends State<ourApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Practic App'),
+      ),
+      body: Container(
+        padding: EdgeInsets.all(12.0),
+        child: Column(
+          children: <Widget>[
+            Text('Create an Account',style: TextStyle(fontSize: 15.2),),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Enter First Name",
+                hintText: "Raju",
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Enter Last Name",
+                hintText: "Rumba",
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Enter Age:",
+                hintText: "E.g : 20",
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Enter Phone Number",
+                hintText: "0123456789",
+              ),
+              keyboardType: TextInputType.number,
+            ),
+            RaisedButton(onPressed: (){}, child: Text('Submit'),),
+          ],
+        ),
+      ),
+    );
+  }
+}
